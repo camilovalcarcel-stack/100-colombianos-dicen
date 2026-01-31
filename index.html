@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>100 Colombianos Dicen</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- BOTÓN PANTALLA COMPLETA -->
+<button id="btnPantalla">⛶ Pantalla completa</button>
+
+<!-- INTRO -->
+<div id="intro">
+  <video id="videoIntro" autoplay muted loop>
+    <source src="media/intro.mp4" type="video/mp4">
+  </video>
+  <button id="btnInicio">Comenzar</button>
+</div>
+
+<!-- JUEGO -->
+<div id="juego" style="display:none;">
+  <h1>100 Colombianos Dicen</h1>
+
+  <div id="pregunta"></div>
+  <div id="temporizador">⏱️ 01:00</div>
+
+  <div id="tablero"></div>
+
+  <div id="controles">
+    <button id="btnRespuesta">Mostrar respuesta</button>
+    <button id="btnSiguiente">Siguiente pregunta</button>
+  </div>
+</div>
+
+<!-- FINAL -->
+<div id="final" style="display:none;">
+  <h1>🎉 Fin del juego 🎉</h1>
+  <p>¡Excelente trabajo!</p>
+  <button onclick="location.reload()">Volver a empezar</button>
+</div>
+
+<!-- AUDIO -->
+<audio id="musicaFondo" loop>
+  <source src="audio/musica.mp3" type="audio/mpeg">
+</audio>
+
+<audio id="sonidoAcierto">
+  <source src="audio/acierto.mp3" type="audio/mpeg">
+</audio>
+
+<script src="script.js"></script>
+</body>
+</html>
